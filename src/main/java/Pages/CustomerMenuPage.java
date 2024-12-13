@@ -19,6 +19,12 @@ public class CustomerMenuPage extends BasePage {
     @FindBy(xpath = "//span[contains(text(),'Customer')]")
     WebElement customerMenu;
 
+<<<<<<< HEAD
+=======
+    @FindBy(xpath = "(//a[normalize-space()='Customer/Vehicle'])[1]")
+    WebElement customerSubMenu;
+
+>>>>>>> 465e8db6ce9fb964d3127a3fe3ba7fc2758b907d
     @FindBy(linkText = "Upload Data")
     WebElement uploadCus;
 
@@ -28,19 +34,36 @@ public class CustomerMenuPage extends BasePage {
     @FindBy(css = "#uploadUrlButton")
     WebElement submitBtn;
 
+<<<<<<< HEAD
 
     public void customerVehicle() throws InterruptedException, AWTException {
 
         wait.until(ExpectedConditions.visibilityOf(customerMenu)).click();
 
         wait.until(ExpectedConditions.visibilityOf(uploadCus)).click();
+=======
+    @FindBy(xpath = "(//span[@class='flex-1 ms-3 text-left rtl:text-right flex-nowrap opacity-50 text-[14px]'])[1]")
+    WebElement customerSubMenu2;
+
+    public void customerVehicle() throws InterruptedException, AWTException {
+//        Thread.sleep(5000);
+        wait.until(ExpectedConditions.visibilityOf(customerMenu)).click();
+//        wait.until(ExpectedConditions.visibilityOf(customerSubMenu)).click();
+        wait.until(ExpectedConditions.visibilityOf(uploadCus)).click();
+//        wait.until(ExpectedConditions.visibilityOf(customerSubMenu2)).click();
+//        uploadBtn.sendKeys("D:\\Automation\\ACI_Foton\\src\\main\\resources\\Latest_customer_vehicle_bulk_upload_template.xlsx");
+>>>>>>> 465e8db6ce9fb964d3127a3fe3ba7fc2758b907d
 
 
         wait.until(ExpectedConditions.visibilityOf(uploadBtn)).click();
         Thread.sleep(5000);
 
         Robot robot = new Robot();
+<<<<<<< HEAD
         StringSelection filePath = new StringSelection("G:\\SSL Wireless\\ACI_Foton-main\\src\\main\\resources\\Latest_customer_vehicle_bulk_upload_template.xlsx");
+=======
+        StringSelection filePath = new StringSelection("D:\\Automation\\ACI_Foton\\src\\main\\resources\\Latest_customer_vehicle_bulk_upload_template.xlsx");
+>>>>>>> 465e8db6ce9fb964d3127a3fe3ba7fc2758b907d
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(filePath,null);
 
         robot.keyPress(KeyEvent.VK_CONTROL);

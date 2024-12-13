@@ -2,6 +2,9 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+<<<<<<< HEAD
     <mapping directory="$PROJECT_DIR$/ACI_Foton" vcs="Git" />
+=======
+>>>>>>> 465e8db6ce9fb964d3127a3fe3ba7fc2758b907d
   </component>
 </project>
